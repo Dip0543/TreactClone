@@ -7,6 +7,7 @@
   <title>TReact</title>
   <link rel="stylesheet" href="./styles.css" />
   <script src="https://kit.fontawesome.com/24f3d94c23.js" crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
 </head>
 
 <body>
@@ -29,6 +30,18 @@
             <li>
               <a class="nav__link nav__link--primary" href="">Sign Up</a>
             </li>
+          </ul>
+        </div>
+        <button class="btn__menu" onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></button>
+          <ul class="menu__links">
+            <li class="menu__link" onclick="closeMenu()"><a href="">About</a></li>
+            <li class="menu__link" onclick="closeMenu()"><a href="">Blog</a></li>
+            <li class="menu__link" onclick="closeMenu()"><a href="">Pricing</a></li>
+            <li class="menu__link" onclick="closeMenu()"><a href="">Contact Us</a></li>
+            <li class="menu__link" onclick="closeMenu()"><a href="">Login</a></li>
+            <li><a class="menu__link--primary" href="">Sign Up</a></li>
           </ul>
         </div>
       </nav>

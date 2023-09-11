@@ -95,6 +95,73 @@ nav {
     display: flex;
 }
 
+.btn__menu {
+    display:none;
+    background-color: transparent;
+    text-align: center;
+    font-size: 24px;
+    border: none;
+    color: #7342d6;
+}
+
+.menu__backdrop {
+    position: absolute;
+    text-align: center;
+    top: 28px;
+    left: 8px;
+    right: 8px;
+    height: 300px;
+    background-color: white;
+    border: solid;
+    border-radius: 12px;
+    border-width: 1px;
+    border-color: rgb(226, 232, 240);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.menu--open .menu__backdrop{
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.menu__link {
+    margin: 24px;
+    font-size: 16px;
+    color: #7c8ba1;
+    font-weight: bold;
+    transition: all 300ms ease;
+}
+
+.menu__link:hover {
+    color:#7342d6;
+    text-decoration: underline;
+    text-underline-offset: 8px;;
+    text-decoration-thickness: 2px;
+}
+
+.menu__link--primary {
+    color: white;
+    font-weight: bold;
+    background-color: #7342d6;
+    border-radius: 24px;
+    padding: 12px 32px;
+    transition: all 300ms ease;
+}
+
+.menu__link--primary:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #5d3eff;
+}
+
 /* Landing */ 
 
 header {
@@ -737,13 +804,26 @@ footer {
     .nav__section--links {
         display: none;
     }
+    .nav__account--links {
+        display: none;
+    }
+    .btn__menu {
+        display: flex;
+    }
     .header__container {
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .header__description {
+        width: 75%;
     }
     .header__description--title {
         font-size: 40px;
     }
-    .user__input {
+    .header__img--wrapper {
+        width: 75%;
+    }
+    /* .user__input {
         display: flex;
         flex-direction: column;
         border: none;
@@ -763,7 +843,7 @@ footer {
         width: 100%;
         padding: 12px 32px;
         margin: 4px 0px;
-    }
+    } */
     .header__img--wrapper {
         margin: 12px;
     }
@@ -899,10 +979,32 @@ footer {
 @media (max-width: 480px) {
     /* Landing */
     .header__description {
+        text-align: center;
         width: 100%;
     }
-    .header__img--wrapper {
-        display: none;
+    .trusted__customer--wrapper {
+        margin-left: 28px;
+    }
+    .user__input {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        border-radius: 0px;
+        overflow: visible;
+        justify-content: start;
+    }
+    .user__input--email {
+        text-align: center;
+        border-style: solid;
+        border-color: #7c8ba1;
+        padding: 12px 16px;
+        border-radius: 24px;
+    }
+    .user__input--btn {
+        text-align: center;
+        width: 100%;
+        padding: 12px 32px;
+        margin: 4px 0px;
     }
     
     /* Features */
@@ -910,54 +1012,77 @@ footer {
         width: 50%;
     }
 
-    /* Quality */ 
+    /* Quality */
+    .quality__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .quality__img--wrapper {
-        display: none;
+        width: 80%;
     }
 
     .section__quality--description {
+        align-items: center;
+        text-align: center;
         width: 100%;
+        margin-bottom: 12px;
     }
 
     /* Steps */
-
-    .steps__img--wrapper {
-        display: none;
+    .steps__container {
+        display: flex;
+        flex-direction: column;
     }
-
     .section__step--description {
+        margin-top: 32px;
         width: 100%;
+    }
+    .steps__img--wrapper {
+        width: 80%;
     }
 
     /* Values */
-
-    .values__img--wrapper {
-        display: none;
+    .values__container {
+        display: flex;
+        flex-direction: column;
     }
-
     .section__values--description {
         width: 100%;
+        margin-bottom: 24px;
+    }
+    .values__img--wrapper {
+        width: 80%;
     }
 
     /* Testimonials */
 
-    .testimonial__img--wrapper {
-        display: none;
+    .testimonial__container {
+        display: flex;
+        flex-direction: column;
     }
-
     .section__testimonial--description {
         width: 100%;
     }
-
+    .testimonial__img--wrapper {
+        width: 80%;
+    }
     /* Join */
-
+    .join {
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+    }
     .join__header {
+        text-align: center;
         font-size: 16px;
+        width: 100%;
     }
 
     .join__btn {
         font-size: 12px;
-        padding: 8px 12px;
+        padding: 12px 16px;
+        margin: 8px 0;
     }
 
 
